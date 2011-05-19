@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<ui:composition template="/template.xhtml">
+		<ui:define name="titulo">Nossos cursos</ui:define>
+
+		<h:form>
+			<ui:repeat var="curso" value="#{listaCursosBean.cursos}">
+			    <div id="curso">
+			    	<h:graphicImage value="/resources/images/#{curso.sigla}.png" />
+		            <div>
+			            <h2>#{curso.nome}</h2>
+			            
+					  	<span>#{curso.descricao} [ <h:commandLink value="reservar vaga" action="#{reservaBean.iniciarReserva(curso)}"/> ]</span>
+		            </div>
+			  	</div>
+		  	</ui:repeat>
+	  	</h:form>
+  
+	</ui:composition>
+</html>

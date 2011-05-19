@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+	<ui:composition template="/template.xhtml">
+		<ui:define name="titulo">Reserva de vaga</ui:define>
+
+		<h:messages/>
+
+		<h:form>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Curso:"/>
+				<h:outputText value="#{reservaBean.reserva.curso.nome}" />
+				
+				<h:outputLabel value="Nome:" />
+				<h:inputText value="#{reservaBean.reserva.nome}" size="40" maxlength="60" 
+					required="true" requiredMessage="Favor informar o nome!"/>
+				
+				<h:outputLabel value="CPF:" />
+				<h:inputText value="#{reservaBean.reserva.cpf}" size="15" maxlength="11" 
+					required="true" requiredMessage="Favor informar o CPF!"/>
+				
+				<h:outputLabel value="E-mail:" />
+				<h:inputText value="#{reservaBean.reserva.email}" size="60" maxlength="200" 
+					required="true" requiredMessage="Favor informar o e-mail!"/>
+				
+				<h:outputLabel value="Telefone:" />
+				<h:inputText value="#{reservaBean.reserva.telefone}" size="20" maxlength="15" 
+					required="true" requiredMessage="Favor informar o telefone!"/>
+				
+			</h:panelGrid>
+			
+			<h:commandButton action="#{reservaBean.reservar}" value="Reservar" />
+		</h:form>
+  
+	</ui:composition>
+</html>

@@ -1,0 +1,38 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+	text-align: left
+	margin: 0px auto;
+	width: 550px;
+
+}
+#header h1 {
+	margin: 0px;
+}
+#header {
+	color: #00C;
+	text-align: left;
+}
+#curso {
+	float: left;
+	width: 550px;
+}
+#curso img {
+	padding: 0px;
+	margin: 0px;
+	float: left;
+}
+#curso div {
+	text-align: left;
+}
+#curso div span {
+	font-size: 14px;
+}
+#curso div h2 {
+	font-size: 18px;
+	color: #03C;
+	margin: 0px;
+	vertical-align: top;
+}
